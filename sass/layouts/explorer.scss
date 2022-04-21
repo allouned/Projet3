@@ -1,0 +1,31 @@
+@use "../utils/box-chadow";
+.explorer {
+    text-align: center;
+    
+    & h2 {
+        margin-top: 2rem;
+        font-size: 2rem;
+      }
+      
+      & p {
+          font-size: 1rem;
+      }
+      
+      & button {
+          border: none;
+          padding: 1rem 2rem;
+          margin-top: 1rem;
+          font-weight: 300;
+          font-size: 1.5rem;
+          border-radius: 2rem;
+          color: white;
+          background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+          cursor: pointer;
+          transition-duration: 0.25s;
+          @include box-chadow.base-shadow;
+      }
+      
+      & button:hover {
+          transform: scale(1.02);
+      }
+  }

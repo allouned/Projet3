@@ -9,6 +9,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 1rem;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -18,7 +22,7 @@ header {
   position: relative;
 }
 
-main .city {
+.city {
   background-color: #f3f3f3;
   text-align: center;
   padding: 0.5rem;
@@ -27,25 +31,20 @@ main .city {
   gap: 1rem;
   align-items: center;
 }
-
-main .city i {
+.city i {
   font-size: 1.5rem;
 }
 
-/* Explorer*/
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   margin-top: 2rem;
   font-size: 2rem;
 }
-
 .explorer p {
   font-size: 1rem;
 }
-
 .explorer button {
   border: none;
   padding: 1rem 2rem;
@@ -57,13 +56,35 @@ main .city i {
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
   transition-duration: 0.25s;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 1px 8px -3px #000000;
 }
-
 .explorer button:hover {
   transform: scale(1.02);
 }
 
+.tuto ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  .tuto ol {
+    flex-direction: column;
+  }
+}
+.tuto li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  border: 1px solid red;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.tuto li:hover {
+  transform: scale(1.02);
+}
+
+/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
