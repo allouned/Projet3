@@ -62,26 +62,50 @@ header {
   transform: scale(1.02);
 }
 
-.tuto ol {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.fonctionnement {
+  counter-reset: steps;
 }
-@media (max-width: 800px) {
-  .tuto ol {
+.fonctionnement ol {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .fonctionnement ol {
     flex-direction: column;
   }
 }
-.tuto li {
+.fonctionnement li {
+  position: relative;
+  list-style-type: none;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
   border: 1px solid red;
   box-shadow: 2px 1px 8px -3px #000000;
 }
-.tuto li:hover {
+.fonctionnement li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.fonctionnement li:hover {
   transform: scale(1.02);
+}
+.fonctionnement li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
