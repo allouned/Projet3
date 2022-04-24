@@ -1,9 +1,8 @@
-@use "../utils/box-chadow";
+@use "../utils/mixins";
 .explorer {
     text-align: center;
     
     & h2 {
-        margin-top: 2rem;
         font-size: 2rem;
       }
       
@@ -19,10 +18,10 @@
           font-size: 1.5rem;
           border-radius: 2rem;
           color: white;
-          background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+          @include mixins.linear-gradient;
           cursor: pointer;
           transition-duration: 0.25s;
-          @include box-chadow.base-shadow;
+          @include mixins.base-shadow;
       }
       
       & button:hover {

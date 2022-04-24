@@ -1,8 +1,8 @@
-@use "../utils/box-chadow";
-@use "../utils/zoom";
+@use "../utils/mixins";
 @use "../utils/variables";
 @use "../utils/colors";
 .fonctionnement {
+    margin-bottom: 2rem;
     counter-reset: steps;
     & ol{
         display: flex;
@@ -26,18 +26,18 @@
             display: grid;
             place-items: center;
             position: absolute;
-            bottom: variables.$fonctionnement-height;
+            top: 50%;
             left: -1*variables.$fonctionnement-height;
+            transform: translateY(-50%);
         }
         list-style-type: none;
         background-color:#f6f6f6;
         padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
-        border: 1px solid red;
-        @include box-chadow.base-shadow;
+        @include mixins.base-shadow;
         &:hover{
-            @include zoom.transform-zoom;
+            @include mixins.transform-zoom;
         }
         & i.fas{
             margin-right: 1rem;
