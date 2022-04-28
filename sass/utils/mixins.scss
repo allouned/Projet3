@@ -8,3 +8,33 @@
 @mixin transform-zoom {
     transform: scale(1.02);    
 }
+
+@mixin restaurants-images-index {
+    background-position: center;
+    border-radius: 1rem 1rem 0 0;
+    height: 15rem;
+    background-size: cover;    
+}
+
+@mixin coeur-animation{
+    position: relative;
+    i {
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .fa-solid{
+          color: transparent;
+          @include linear-gradient (1);
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 0;
+          transition: all 300ms;
+        }    
+        &:hover .fa-solid{
+            opacity: 1;
+            transform: translateY(-50%) scale(1.3);
+        } 
+}

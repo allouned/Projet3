@@ -1,10 +1,11 @@
-@use "./sass/base/base.scss";
-@use "./sass/layouts/header.scss";
-@use "./sass/layouts/city.scss";
-@use "./sass/layouts/explorer.scss";
-@use "./sass/layouts/fonctionnement.scss";
-@use "./sass/layouts/restaurants.scss";
-@use "./sass/layouts/footer.scss";
+@use "./sass/base/base";
+@use "./sass/layouts/header";
+@use "./sass/layouts/city";
+@use "./sass/layouts/explorer";
+@use "./sass/layouts/fonctionnement";
+@use "./sass/layouts/restaurants";
+@use "./sass/layouts/footer";
+@use "./sass/pages/restaurant"
 
     
  /*# sourceMappingURL=style.css.map */

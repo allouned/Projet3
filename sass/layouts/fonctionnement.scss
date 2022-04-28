@@ -13,6 +13,10 @@
 
     }
     & li{
+        &:hover{
+            background-color: lighten(colors.$purple , 30%);
+            transition: all 0.3s;
+        }
         position: relative;
         &::before{
             content: counter(steps);
