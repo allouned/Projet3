@@ -2,8 +2,8 @@
     background-image: linear-gradient(0deg, rgba(147, 86, 220, $opacity), rgba(255, 121, 218,$opacity));
     
 }
-@mixin box-shadow {
-    box-shadow: 2px 1px 8px -3px #000000;    
+@mixin box-shadow ($spread-radius:-3px){
+    box-shadow: 2px 1px 8px $spread-radius #000000;    
 } 
 @mixin transform-zoom {
     transform: scale(1.02);    
@@ -51,7 +51,9 @@
     @include linear-gradient;
     @include box-shadow;  
     &:hover {
-        transform: scale(1.02);
+        transform: scale(1.05);
+        @include linear-gradient($opacity:0.8);
+        @include box-shadow($spread-radius:0px);
     }
 }
 

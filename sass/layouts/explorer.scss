@@ -1,4 +1,5 @@
 @use "../utils/mixins";
+@use "../utils/colors";
 .explorer {
     text-align: center;
     
@@ -13,4 +14,32 @@
       & button {
         @include mixins.button-base;
       }
+  }
+  .loading-spinner{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: 500ms 2s loader-disparition forwards;
+    transform-origin: bottom;
+    &::after{
+      content: "welcome";
+      color: black;
+      display: grid;
+      place-items: center;
+      font: 22px bolder; 
+      border-bottom: 5px solid red;
+      border-top: 5px solid blue;
+      border-left: 5px solid green;
+      border-right: 5px solid yellow;
+      border-radius: 50%;   
+      width: 90px;
+      height: 90px;
+      animation: 2s loader-spinner infinite linear;
+    }
+    
   }

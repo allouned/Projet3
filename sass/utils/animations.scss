@@ -8,3 +8,29 @@
         }
     }    
 }
+
+@keyframes animation-meals{    
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}  
+@keyframes loader-disparition{    
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+} 
+@keyframes loader-spinner{    
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+

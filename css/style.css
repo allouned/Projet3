@@ -36,7 +36,7 @@ header {
   position: relative;
 }
 
-.city {
+.localisation-resto {
   background-color: #f3f3f3;
   text-align: center;
   padding: 0.5rem;
@@ -45,7 +45,7 @@ header {
   gap: 1rem;
   align-items: center;
 }
-.city i {
+.localisation-resto i {
   font-size: 1.5rem;
 }
 
@@ -72,7 +72,37 @@ header {
   box-shadow: 2px 1px 8px -3px #000000;
 }
 .explorer button:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  box-shadow: 2px 1px 8px 0px #000000;
+}
+
+.loading-spinner {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: 500ms 2s loader-disparition forwards;
+  transform-origin: bottom;
+}
+.loading-spinner::after {
+  content: "welcome";
+  color: black;
+  display: grid;
+  place-items: center;
+  font: 22px bolder;
+  border-bottom: 5px solid red;
+  border-top: 5px solid blue;
+  border-left: 5px solid green;
+  border-right: 5px solid yellow;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: 2s loader-spinner infinite linear;
 }
 
 .fonctionnement {
@@ -235,6 +265,30 @@ footer a {
   color: inherit;
 }
 
+@keyframes animation-meals {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-disparition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header__arrow {
   position: absolute;
   left: 2rem;
@@ -311,9 +365,20 @@ footer a {
   }
 }
 #page-resto .resto-main .meal__composition {
+  animation: 1s animation-meals ease-in-out;
+  animation-fill-mode: both;
   overflow: hidden;
   background-color: #f6f6f6;
   padding: 1rem;
+}
+#page-resto .resto-main .meal__composition:nth-child(1) {
+  animation-delay: 1000ms;
+}
+#page-resto .resto-main .meal__composition:nth-child(2) {
+  animation-delay: 2000ms;
+}
+#page-resto .resto-main .meal__composition:nth-child(3) {
+  animation-delay: 3000ms;
 }
 #page-resto .resto-main .meal__composition h3 {
   padding-bottom: 1rem;
@@ -352,7 +417,6 @@ footer a {
 #page-resto .resto-main .meal__composition .menu-item .menu-item__selection i {
   display: grid;
   place-items: center;
-  aspect-ratio: 1;
   width: 1.5rem;
   border-radius: 1rem;
   color: #99E2D0;
@@ -407,7 +471,9 @@ footer a {
   box-shadow: 2px 1px 8px -3px #000000;
 }
 #page-resto .resto-main .commander button:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  box-shadow: 2px 1px 8px 0px #000000;
 }
 #page-resto footer {
   padding: 2rem 1rem;
