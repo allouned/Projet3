@@ -48,7 +48,7 @@
             }
             &__composition{
                 animation: 1s animation-meals ease-in-out;
-                animation-fill-mode: both;
+                animation-fill-mode:both;
                 @for $i from 1 through 3{
                     &:nth-child(#{$i}){
                         animation-delay: 1000ms * $i;
@@ -93,8 +93,9 @@
                         i{
                             display: grid;
                             place-items: center;
-                            width: 1.5rem;
-                            border-radius: 1rem;
+                            width: 2rem;
+                            height: 2rem;
+                            border-radius: 50%;
                             color: colors.$tertiaire;
                             background-color: white;
                         }

@@ -27,15 +27,15 @@
     animation: 500ms 2s loader-disparition forwards;
     transform-origin: bottom;
     &::after{
-      content: "welcome";
-      color: black;
+      content: "Chargement";
+      color: colors.$purple;
       display: grid;
       place-items: center;
-      font: 22px bolder; 
-      border-bottom: 5px solid red;
-      border-top: 5px solid blue;
-      border-left: 5px solid green;
-      border-right: 5px solid yellow;
+      font: 15px bolder; 
+      border-bottom: 5px solid white;
+      border-top: 5px solid white;
+      border-left: 5px solid colors.$purple;
+      border-right: 5px solid colors.$purple;
       border-radius: 50%;   
       width: 90px;
       height: 90px;

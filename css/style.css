@@ -90,15 +90,15 @@ header {
   transform-origin: bottom;
 }
 .loading-spinner::after {
-  content: "welcome";
-  color: black;
+  content: "Chargement";
+  color: #9356DC;
   display: grid;
   place-items: center;
-  font: 22px bolder;
-  border-bottom: 5px solid red;
-  border-top: 5px solid blue;
-  border-left: 5px solid green;
-  border-right: 5px solid yellow;
+  font: 15px bolder;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
+  border-left: 5px solid #9356DC;
+  border-right: 5px solid #9356DC;
   border-radius: 50%;
   width: 90px;
   height: 90px;
@@ -267,10 +267,12 @@ footer a {
 
 @keyframes animation-meals {
   0% {
-    transform: scale(0);
+    transform: translatey(50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes loader-disparition {
@@ -417,8 +419,9 @@ footer a {
 #page-resto .resto-main .meal__composition .menu-item .menu-item__selection i {
   display: grid;
   place-items: center;
-  width: 1.5rem;
-  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
   color: #99E2D0;
   background-color: white;
 }
